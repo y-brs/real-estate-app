@@ -10,14 +10,32 @@ export default function Layout({ children }) {
       <Head>
         <title>Real Estate App</title>
       </Head>
-      <Box maxWidth="1280px" m="auto">
-        <header>
-          <Header />
-        </header>
-        <main>{children}</main>
-        <footer>
-          <Footer />
-        </footer>
+
+      <Box
+        as="header"
+        borderBottom='1px'
+        borderColor='gray.100'
+      >
+        <Box maxWidth="1280px" m="auto">
+          <Header/>
+        </Box>
+      </Box>
+
+      <main>
+        <Box maxWidth="1280px" m="auto">
+          {children}
+        </Box>
+      </main>
+
+      <Box
+        as="footer"
+        borderTop='1px'
+        borderColor='gray.100'
+        mt='10'
+      >
+        <Box maxWidth="1280px" m="auto">
+          <Footer/>
+        </Box>
       </Box>
     </>
   );
