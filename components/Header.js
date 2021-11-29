@@ -20,8 +20,21 @@ const Navbar = () => (
       ml='10'
       display={{ base: 'none', md: 'block' }}
     >
-      <Stack as="nav" direction='row' spacing='24px' fontSize='md' color='blue.700' fontWeight='bold'>
-        <Link href='/' >
+      <Stack
+        as="nav"
+        direction='row'
+        spacing='24px'
+        fontSize='md'
+        color='blue.700'
+        sx={{
+          'a:hover': {
+            color: 'blue.500',
+            textDecoration: 'underline',
+          },
+        }}
+        fontWeight='bold'
+      >
+        <Link href='/' passHref>
           Home
         </Link>
         <Link href='/search' passHref>
