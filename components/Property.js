@@ -1,6 +1,6 @@
 
 import Link from 'next/link'
-import { Box, Text, Badge, Spacer, Icon, Flex, Image } from '@chakra-ui/react'
+import { Box, Text, Badge, Spacer, Icon, Flex, Image, useColorModeValue } from '@chakra-ui/react'
 import { Avatar } from '@chakra-ui/avatar'
 import { FaBed, FaBath } from 'react-icons/fa'
 import { BsGridFill } from 'react-icons/bs'
@@ -13,6 +13,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
   <Link href={`/property/${externalID}`} passHref>
     <Box
       boxShadow='md'
+      bg={useColorModeValue('', 'whiteAlpha.100')}
       cursor='pointer'
     >
       <Image
@@ -38,7 +39,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
           my='1'
           fontWeight='semibold'
           as='h2'
-          color='gray.800'
+          color={useColorModeValue('blackAlpha.800', 'whiteAlpha.800')}
           lineHeight='tight'
           isTruncated
         >
@@ -47,10 +48,11 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
 
         <Flex
           alignItems='center'
-          color='gray.600'
+          // color='gray.600'
           fontSize='sm'
           letterSpacing='wide'
           textTransform='uppercase'
+          color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
         >
           <Text
             display='flex'

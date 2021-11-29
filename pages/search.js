@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import { Flex, Box, Text, Icon, SimpleGrid } from '@chakra-ui/react'
+import { Flex, Box, Text, Icon, SimpleGrid, useColorModeValue } from '@chakra-ui/react'
 import { BsFilter } from 'react-icons/bs'
 
 import Property from '../components/Property'
@@ -24,7 +24,8 @@ const Search = ({ properties }) => {
         <Flex
           onClick={() => setSearchFilters(!searchFilters)}
           cursor='pointer'
-          bg='gray.100'
+          bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+          // bg='gray.100'
           p='2'
           fontWeight='black'
           fontSize='lg'

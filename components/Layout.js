@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Box } from '@chakra-ui/react';
+import { Box, useColorModeValue } from '@chakra-ui/react';
 
 import Footer from './Footer';
 import Header from './Header';
@@ -14,27 +14,27 @@ export default function Layout({ children }) {
       <Box
         as="header"
         borderBottom='1px'
-        borderColor='gray.100'
+        borderColor={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
       >
         <Box maxWidth="1280px" m="auto">
-          <Header/>
+          <Header />
         </Box>
       </Box>
 
-      <main>
+      <Box as="main">
         <Box maxWidth="1280px" m="auto">
           {children}
         </Box>
-      </main>
+      </Box>
 
       <Box
         as="footer"
         borderTop='1px'
-        borderColor='gray.100'
+        borderColor={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
         mt='10'
       >
         <Box maxWidth="1280px" m="auto">
-          <Footer/>
+          <Footer />
         </Box>
       </Box>
     </>

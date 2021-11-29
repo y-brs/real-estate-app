@@ -1,10 +1,10 @@
-import { Box, chakra, Container, Stack, Text, VisuallyHidden } from '@chakra-ui/react'
+import { Box, chakra, Container, Stack, Text, VisuallyHidden, useColorModeValue } from '@chakra-ui/react'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
-      bg='blackAlpha.100'
+      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
       rounded={'full'}
       w={8}
       h={8}
@@ -29,7 +29,7 @@ const Footer = () => (
   <Box
     textAlign='center'
     py='5'
-    color='gray.600'
+    color={useColorModeValue('blackAlpha.600', 'whiteAlpha.600')}
   >
     <Container
       w='100%'
