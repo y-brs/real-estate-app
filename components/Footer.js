@@ -1,5 +1,5 @@
-import { Box, chakra, Container, Stack, Text, VisuallyHidden } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { Box, chakra, Container, Stack, Text, VisuallyHidden } from '@chakra-ui/react'
+import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 const SocialButton = ({ children, label, href }) => {
   return (
@@ -22,8 +22,8 @@ const SocialButton = ({ children, label, href }) => {
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
     </chakra.button>
-  );
-};
+  )
+}
 
 const Footer = () => (
   <Box
@@ -54,6 +54,6 @@ const Footer = () => (
       </Stack>
     </Container>
   </Box>
-);
+)
 
-export default Footer;
+export default Footer

@@ -9,7 +9,7 @@ import millify from 'millify'
 
 import DefaultImage from '../assets/images/house.jpg'
 
-const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID  } }) => (
+const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID } }) => (
   <Link href={`/property/${externalID}`} passHref>
     <Box
       boxShadow='md'

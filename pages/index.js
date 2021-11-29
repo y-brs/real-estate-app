@@ -1,9 +1,8 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Flex, Box, Text, Button, SimpleGrid } from '@chakra-ui/react'
 
-import Property from '../components/Property';
+import Property from '../components/Property'
 import { BASE_URL, fetchApi } from '../utils/fetchApi'
 
 export const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, linkName, imageUrl }) => (
@@ -35,10 +34,9 @@ const Home = ({ propertiesForSale, propertiesForRent }) => (
     <SimpleGrid
       columns={{ sm: '1', md: '2', lg: '3' }}
       spacing='5'
-      paddingLeft='5'
-      paddingRight='5'
+      px='5'
     >
-      {/* {propertiesForRent.map((property) => <Property property={property} key={property.id} />)} */}
+      {propertiesForRent.map((property) => <Property property={property} key={property.id} />)}
     </SimpleGrid>
 
     <Banner
@@ -52,26 +50,25 @@ const Home = ({ propertiesForSale, propertiesForRent }) => (
       imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008'
     />
     <SimpleGrid
-      columns={{ md: '2', lg: '3' }}
+      columns={{ sm: '1', md: '2', lg: '3' }}
       spacing='5'
-      paddingLeft='5'
-      paddingRight='5'
+      px='5'
     >
-      {/* {propertiesForSale.map((property) => <Property property={property} key={property.id} />)} */}
+      {propertiesForSale.map((property) => <Property property={property} key={property.id} />)}
     </SimpleGrid>
   </Box>
 )
 
-// export async function getStaticProps() {
-//   const propertyForSale = await fetchApi(`${BASE_URL}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`)
-//   const propertyForRent = await fetchApi(`${BASE_URL}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
+export async function getStaticProps() {
+  const propertyForSale = await fetchApi(`${BASE_URL}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`)
+  const propertyForRent = await fetchApi(`${BASE_URL}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
 
-//   return {
-//     props: {
-//       propertiesForSale: propertyForSale?.hits,
-//       propertiesForRent: propertyForRent?.hits,
-//     },
-//   }
-// }
+  return {
+    props: {
+      propertiesForSale: propertyForSale?.hits,
+      propertiesForRent: propertyForRent?.hits,
+    },
+  }
+}
 
 export default Home

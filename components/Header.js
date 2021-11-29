@@ -7,7 +7,8 @@ import { FaKey } from 'react-icons/fa';
 
 const Navbar = () => (
   <Flex
-    p='2'
+    py='2'
+    px='5'
     alignItems='center'
   >
     <Box fontSize='3xl' color='blue.500' fontWeight='bold'>
