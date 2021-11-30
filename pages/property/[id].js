@@ -13,7 +13,7 @@ import ImageScrollbar from '../../components/ImageScrollbar'
 const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title, baths, area, agency, isVerified, description, type, purpose, furnishingStatus, amenities, photos } }) => (
   <>
     <Head>
-      <title>{title} / Property {purpose} / Real Estate App</title>
+      <title>{title.length > 100 ? title.substring(0, 100) + '...' : title} / Property {purpose} / Real Estate App</title>
     </Head>
 
     <Box
@@ -74,49 +74,34 @@ const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title
         </Text>
       </Flex>
 
-      <Box>
-        {amenities.length && <Text fontSize='xl' fontWeight='black' marginTop='5'>Facilites</Text>}
-          <Flex flexWrap='wrap'>
-            {amenities?.map((item) => (
-                item?.amenities?.map((amenity) => (
-                  <Text
-                    key={amenity.text}
-                    fontWeight='bold'
-                    color='blue.400'
-                    fontSize='sm'
-                    p='2'
-                    bg='gray.200'
-                    mr='2'
-                    mb='2'
-                    borderRadius='5'
-                  >
-                    {amenity.text}
-                  </Text>
-                ))
-            ))}
-          </Flex>
-      </Box>
+      <Box mb='8'>
+        {amenities.length && <Text fontSize='xl' fontWeight='black' mt='5'>Facilites</Text>}
 
-      {/* <Flex flexWrap='wrap' textTransform='uppercase' justifyContent='space-between'>
-        <Flex justifyContent='space-between' w='400px' borderBottom='1px' borderColor='gray.100' p='3'>
-          <Text>Type</Text>
-          <Text fontWeight='bold'>{type}</Text>
+        <Flex flexWrap='wrap' mt='2'>
+          {amenities?.map((item) => (
+              item?.amenities?.map((amenity) => (
+                <Text
+                  key={amenity.text}
+                  fontWeight='bold'
+                  color='blue.400'
+                  fontSize='sm'
+                  py='2'
+                  px='3'
+                  bg='gray.200'
+                  mr='2'
+                  mb='2'
+                  borderRadius='5'
+                >
+                  {amenity.text}
+                </Text>
+              ))
+          ))}
         </Flex>
-        <Flex justifyContent='space-between' w='400px' borderBottom='1px' borderColor='gray.100' p='3'>
-          <Text>Purpose</Text>
-          <Text fontWeight='bold'>{purpose}</Text>
-        </Flex>
-        {furnishingStatus && (
-          <Flex justifyContent='space-between' w='400px' borderBottom='1px' borderColor='gray.100' p='3' >
-            <Text>Furnishing Status</Text>
-            <Text fontWeight='bold'>{furnishingStatus}</Text>
-          </Flex>
-        )}
-      </Flex> */}
+      </Box>
 
       {photos && <ImageScrollbar data={photos} />}
 
-      <Box marginTop='5'>
+      <Box marginTop='8'>
         <Text
           lineHeight='2'
           color={useColorModeValue('gray.800', 'gray.300')}

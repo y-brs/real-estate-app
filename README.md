@@ -14,7 +14,7 @@ link
 - framer-motion
 - millify
 - nprogress
-- react-horizontal-scrolling-menu
+- react-slick
 - react-icons
 
 ### Screenshot
