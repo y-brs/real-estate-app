@@ -48,7 +48,6 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
 
         <Flex
           alignItems='center'
-          // color='gray.600'
           fontSize='sm'
           letterSpacing='wide'
           textTransform='uppercase'

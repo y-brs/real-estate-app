@@ -38,7 +38,7 @@ const Search = ({ properties }) => {
 
         {searchFilters && <SearchFilters />}
 
-        <Text fontSize='2xl' p='5' fontWeight='bold'>
+        <Text fontSize='2xl' p='5' pt='10' fontWeight='bold'>
           Properties {router.query.purpose}
         </Text>
 
