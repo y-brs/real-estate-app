@@ -1,8 +1,8 @@
-import Head from 'next/head';
-import { Box, useColorModeValue } from '@chakra-ui/react';
+import Head from 'next/head'
+import { Box, useColorModeValue } from '@chakra-ui/react'
 
-import Footer from './Footer';
-import Header from './Header';
+import Footer from './Footer'
+import Header from './Header'
 
 export default function Layout({ children }) {
   return (
@@ -38,5 +38,5 @@ export default function Layout({ children }) {
         </Box>
       </Box>
     </>
-  );
+  )
 }

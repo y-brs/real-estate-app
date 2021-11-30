@@ -83,11 +83,11 @@ const PropertyDetails = ({ propertyDetails: { price, rentFrequency, rooms, title
                 <Text
                   key={amenity.text}
                   fontWeight='bold'
-                  color='blue.400'
+                  color={useColorModeValue('blue.500', 'blue.300')}
+                  bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
                   fontSize='sm'
                   py='2'
                   px='3'
-                  bg='gray.200'
                   mr='2'
                   mb='2'
                   borderRadius='5'
