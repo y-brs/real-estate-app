@@ -2,6 +2,8 @@
 
 Real Estate Application — with rental homes and for-sale properties, advanced property filtering, property details page with an image carousel, error page, day/night theme and much more.
 
+https://real-estate-app-rose.vercel.app
+
 ## Stack
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 - [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
@@ -22,7 +24,7 @@ $PROJECT_ROOT
 │   # React component files
 ├── components
 │   # Fetch and filters data files
-├── components
+├── utils
 │   # Non-react modules
 ├── assets
 │   # Static files for images
@@ -31,7 +33,7 @@ $PROJECT_ROOT
 
 ### Screenshot
 
-link
+![Screenshot 2021-11-30 at 23 33 47](https://user-images.githubusercontent.com/68222437/144125180-d5fa4a03-57bc-4d9e-a384-d4a0627e30bc.png)
 
 ## Getting Started with Next.js
 
