@@ -8,6 +8,7 @@ import { BsFilter } from 'react-icons/bs'
 import Property from '../components/Property'
 import SearchFilters from '../components/SearchFilters'
 import { BASE_URL, fetchApi } from '../utils/fetchApi'
+
 import noresult from '../assets/images/noresult.svg'
 
 const Search = ({ properties }) => {
@@ -25,7 +26,6 @@ const Search = ({ properties }) => {
           onClick={() => setSearchFilters(!searchFilters)}
           cursor='pointer'
           bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-          // bg='gray.100'
           p='2'
           fontWeight='black'
           fontSize='lg'

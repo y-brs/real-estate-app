@@ -52,7 +52,7 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
           fontSize='sm'
           letterSpacing='wide'
           textTransform='uppercase'
-          color={useColorModeValue('blackAlpha.700', 'whiteAlpha.700')}
+          color={useColorModeValue('blue.500', 'blue.300')}
         >
           <Text
             display='flex'
