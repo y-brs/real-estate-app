@@ -1,21 +1,33 @@
 # Real Estate App
 
-link
+Real Estate Application — with rental homes and for-sale properties, advanced property filtering, property details page with an image carousel, error page, day/night theme and much more.
 
 ## Stack
-- React
-- Next.js
-- Chakra UI
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [Next.js](https://nextjs.org/) - A React framework with hybrid static & server rendering, and route pre-fetching, etc.
+- [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library for React
 - RapidAPI
-- @chakra-ui/react
-- @emotion/react
-- @emotion/styled
-- axios
-- framer-motion
-- millify
-- nprogress
-- react-slick
-- react-icons
+- Axios
+- Millify
+- Nprogress
+- React-slick
+- React-icons
+
+## Project structure
+
+```
+$PROJECT_ROOT
+│   # Page files
+├── pages
+│   # React component files
+├── components
+│   # Fetch and filters data files
+├── components
+│   # Non-react modules
+├── assets
+│   # Static files for images
+└── public
+```
 
 ### Screenshot
 

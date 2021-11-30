@@ -11,6 +11,7 @@ import noresult from '../assets/images/noresult.svg'
 const SearchFilters = () => {
   const [filters] = useState(filterData)
   const [searchTerm, setSearchTerm] = useState('')
+
   const [locationData, setLocationData] = useState()
   const [showLocations, setShowLocations] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -54,7 +55,11 @@ const SearchFilters = () => {
       >
         {filters?.map((filter) => (
           <Box key={filter.queryName}>
-            <Select onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' >
+            <Select
+              onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })}
+              placeholder={filter.placeholder}
+              w='fit-content' p='2'
+            >
               {filter?.items?.map((item) => (
                 <option value={item.value} key={item.value}>
                   {item.name}
@@ -65,8 +70,13 @@ const SearchFilters = () => {
         ))}
       </Flex>
 
-      <Flex flexDir='column'>
-        <Button onClick={() => setShowLocations(!showLocations)} border='1px' borderColor='gray.200' marginTop='2' >
+      <Flex flexDir='column' px='5'>
+        <Button
+          onClick={() => setShowLocations(!showLocations)}
+          border='1px'
+          borderColor={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+          marginTop='2'
+        >
           Search Location
         </Button>
         {showLocations && (
@@ -91,7 +101,7 @@ const SearchFilters = () => {
             )}
             {loading && <Spinner margin='auto' marginTop='3' />}
             {showLocations && (
-              <Box height='300px' overflow='auto'>
+              <Box height='220px' overflow='auto'>
                 {locationData?.map((location) => (
                   <Box
                     key={location.id}
